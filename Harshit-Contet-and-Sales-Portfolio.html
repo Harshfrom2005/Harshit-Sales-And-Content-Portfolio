@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harshit — Content, Presentation & Sales Portfolio</title>
+    <meta
+      name="description"
+      content="Harshit — on-camera content creator, presenter and sales-focused communicator. Business short-form content, editing, presentation and objection handling."
+    />
+    <style>
+      :root {
+        --bg: #0b0d10;
+        --panel: #11151a;
+        --panel2: #171c22;
+        --text: #f5f7fa;
+        --muted: #aab3bf;
+        --line: #27303a;
+        --accent: #d8ff4f;
+        --accent2: #b7d83c;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: auto;
+        padding: 0 24px;
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(11, 13, 16, 0.88);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .navin {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .logo {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .navlinks {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .navlinks a {
+        text-decoration: none;
+      }
+      .hero {
+        padding: 92px 0 70px;
+      }
+      .kicker {
+        color: var(--accent);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: clamp(44px, 7vw, 82px);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+        margin: 14px 0 24px;
+        max-width: 900px;
+      }
+      .lead {
+        font-size: clamp(18px, 2.2vw, 23px);
+        color: #d8dde4;
+        max-width: 760px;
+      }
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 17px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 750;
+        border: 1px solid var(--line);
+        background: var(--panel2);
+      }
+      .btn.primary {
+        background: var(--accent);
+        color: #111;
+        border-color: var(--accent);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin: 34px 0 10px;
+      }
+      .stat {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 14px;
+        padding: 20px;
+      }
+      .stat b {
+        display: block;
+        font-size: 29px;
+        letter-spacing: -0.04em;
+      }
+      .stat span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      section {
+        padding: 72px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        font-size: 34px;
+        letter-spacing: -0.035em;
+        margin: 0 0 12px;
+      }
+      .sectionlead {
+        color: var(--muted);
+        max-width: 720px;
+        margin-bottom: 30px;
+      }
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .video {
+        aspect-ratio: 9/16;
+        background: #050608;
+      }
+      .video iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .cardbody {
+        padding: 17px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+      }
+      .card h3 {
+        margin: 7px 0 8px;
+        font-size: 19px;
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 0 0 14px;
+      }
+      .link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .twocol {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .embed {
+        aspect-ratio: 16/9;
+        background: #050608;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .embed iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .copy {
+        padding: 24px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 16px;
+      }
+      .copy h3 {
+        margin-top: 0;
+        font-size: 24px;
+      }
+      .copy p {
+        color: #c9d0d8;
+      }
+      .pillrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 18px;
+      }
+      .pill {
+        padding: 7px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: #d8dde4;
+        font-size: 13px;
+        background: #0e1216;
+      }
+      .case {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 20px;
+      }
+      .case .big {
+        padding: 28px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 16px;
+      }
+      .case h3 {
+        font-size: 25px;
+        margin-top: 0;
+      }
+      .case ul {
+        padding-left: 20px;
+        color: #c8d0d8;
+      }
+      .highlight {
+        border-left: 3px solid var(--accent);
+        padding-left: 16px;
+        color: #e8edf2;
+      }
+      .cert {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .certbox {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 16px;
+        padding: 24px;
+      }
+      .certbox h3 {
+        margin-top: 0;
+      }
+      .certbox strong {
+        color: var(--accent);
+      }
+      footer {
+        padding: 42px 0 60px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .small {
+        font-size: 12px;
+        color: #7f8996;
+      }
+      @media (max-width: 800px) {
+        .stats,
+        .grid3,
+        .twocol,
+        .case,
+        .cert {
+          grid-template-columns: 1fr;
+        }
+        .navlinks {
+          display: none;
+        }
+        .hero {
+          padding-top: 65px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap navin">
+        <div class="logo">HARSHIT</div>
+        <div class="navlinks">
+          <a href="#work">Work</a><a href="#about">About</a
+          ><a href="#sales">Sales</a><a href="#credentials">Credentials</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="wrap">
+        <div class="kicker">Content • Presentation • Sales</div>
+        <h1>I turn business ideas into content people want to watch.</h1>
+        <p class="lead">
+          On-camera communicator with hands-on short-form content, editing and
+          sales-communication experience. Open to Dubai/UAE opportunities across
+          content, social media, sales and business development.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#work">View selected work</a>
+          <a class="btn" href="#sales">See sales simulation</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <b>129K+</b><span>views on top business Short</span>
+          </div>
+          <div class="stat">
+            <b>16K+</b><span>views on second featured Short</span>
+          </div>
+          <div class="stat">
+            <b>11K+</b><span>views on third featured Short</span>
+          </div>
+          <div class="stat">
+            <b>97%</b
+            ><span
+              >final assessment score in Business Communication training</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="work">
+      <div class="wrap">
+        <h2>Selected content</h2>
+        <p class="sectionlead">
+          Three business-focused Shorts that demonstrate the same combined skill
+          set: idea selection, scripting/presentation, on-camera delivery and
+          editing.
+        </p>
+        <div class="grid3">
+          <article class="card">
+            <div class="video">
+              <iframe
+                src="https://www.youtube.com/embed/MCoAs9PTmYo"
+                title="Business Content — 129K+ views"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="cardbody">
+              <div class="eyebrow">Featured work 01</div>
+              <h3>Business Content — 129K+ views</h3>
+              <p>Independently created and edited in CapCut PC.</p>
+              <a
+                class="link"
+                href="https://youtube.com/shorts/MCoAs9PTmYo?si=cmLMpwquvl9gIbrl"
+                target="_blank"
+                rel="noopener"
+                >Open on YouTube ↗</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="video">
+              <iframe
+                src="https://www.youtube.com/embed/dx4J9Z7id50"
+                title="Business Content — 16K+ views"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="cardbody">
+              <div class="eyebrow">Featured work 02</div>
+              <h3>Business Content — 16K+ views</h3>
+              <p>Independently created and edited in CapCut PC.</p>
+              <a
+                class="link"
+                href="https://youtube.com/shorts/dx4J9Z7id50?si=1M38ZGRCQC1DnKgy"
+                target="_blank"
+                rel="noopener"
+                >Open on YouTube ↗</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <div class="video">
+              <iframe
+                src="https://www.youtube.com/embed/_L7hXq37LaA"
+                title="Business Content — 11K+ views"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="cardbody">
+              <div class="eyebrow">Featured work 03</div>
+              <h3>Business Content — 11K+ views</h3>
+              <p>Independently created and edited in CapCut PC.</p>
+              <a
+                class="link"
+                href="https://youtube.com/shorts/_L7hXq37LaA?si=2vSC0hoHYklSbn0l"
+                target="_blank"
+                rel="noopener"
+                >Open on YouTube ↗</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>About me</h2>
+        <div class="twocol">
+          <div class="embed">
+            <iframe
+              src="https://drive.google.com/file/d/1Y51YOu8aqooSUwpJRdIX5jIGIALPfhe2/preview"
+              title="Harshit introduction video"
+              loading="lazy"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="copy">
+            <div class="eyebrow">Introduction</div>
+            <h3>Clear communication, business-first thinking.</h3>
+            <p>
+              I’m a young, self-driven communicator focused on business content,
+              presentation and customer-facing work. I’m comfortable getting on
+              camera, explaining ideas clearly and learning new tools quickly.
+            </p>
+            <p>
+              I create and edit my own short-form videos and can work with
+              CapCut PC and DaVinci Resolve. I’m interested in roles where
+              communication and execution matter more than a traditional degree.
+            </p>
+            <div class="pillrow">
+              <span class="pill">On-camera presentation</span
+              ><span class="pill">Short-form content</span>
+              <span class="pill">Video editing</span
+              ><span class="pill">Business communication</span>
+              <span class="pill">Sales communication</span
+              ><span class="pill">AI-assisted workflows</span>
+            </div>
+            <p class="small" style="margin-top: 20px">
+              <a
+                class="link"
+                href="https://drive.google.com/file/d/1Y51YOu8aqooSUwpJRdIX5jIGIALPfhe2/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener"
+                >Open introduction video ↗</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sales">
+      <div class="wrap">
+        <h2>Sales communication</h2>
+        <p class="sectionlead">
+          A practical demonstration of objection handling using an AI-assisted
+          sales scenario.
+        </p>
+        <div class="twocol">
+          <div class="embed">
+            <iframe
+              src="https://drive.google.com/file/d/1SksyJGl4s6qqnB4l1smWA8ftjwuMn15C/preview"
+              title="Harshit sales objection handling video"
+              loading="lazy"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="copy">
+            <div class="eyebrow">Sales simulation</div>
+            <h3>Handling objections instead of just talking about sales.</h3>
+            <p>
+              This piece demonstrates how I approach a customer objection in a
+              simulated sales interaction. The AI component is used as a working
+              tool; the portfolio evidence is the communication, reasoning and
+              response delivered by me.
+            </p>
+            <p class="highlight">
+              This is a demonstration project, not a claim of professional sales
+              employment experience.
+            </p>
+            <p class="small">
+              <a
+                class="link"
+                href="https://drive.google.com/file/d/1SksyJGl4s6qqnB4l1smWA8ftjwuMn15C/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener"
+                >Open sales video ↗</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>How I can contribute</h2>
+        <div class="case">
+          <div class="big">
+            <h3>Content & Social Media</h3>
+            <ul>
+              <li>
+                Create short-form business/product content for social platforms.
+              </li>
+              <li>
+                Present ideas naturally on camera rather than relying only on
+                graphics or voice-over.
+              </li>
+              <li>
+                Handle scripting, editing and publishing-ready video production
+                independently.
+              </li>
+              <li>
+                Use performance data such as views to learn what gets attention.
+              </li>
+            </ul>
+          </div>
+          <div class="big">
+            <h3>Sales & Business Development</h3>
+            <ul>
+              <li>
+                Communicate confidently with prospects and customers in English.
+              </li>
+              <li>
+                Explain products or ideas simply and handle common objections.
+              </li>
+              <li>
+                Combine content and communication to support lead generation.
+              </li>
+              <li>
+                Use AI tools to accelerate research, preparation and workflow.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="wrap">
+        <h2>Credentials</h2>
+        <p class="sectionlead">
+          Formal communication training supports the practical work shown above.
+        </p>
+        <div class="cert">
+          <div class="certbox">
+            <div class="eyebrow">Internshala Trainings</div>
+            <h3>Business Communication Skills</h3>
+            <p>
+              Completed a 6-week online training covering business communication
+              foundations, essential communication, application process,
+              workplace communication, digital collaboration, AI communication,
+              inclusive communication, crisis/conflict communication and
+              professional branding.
+            </p>
+            <p><strong>97% final assessment • Top performer</strong></p>
+            <p class="small">Certified 26 September 2026.</p>
+          </div>
+          <div class="certbox">
+            <div class="eyebrow">Additional training</div>
+            <h3>Business Communication Skills — Grade A</h3>
+            <p>
+              Completed a Business Communication Skills course with Grade A,
+              issued through Scholiverse Educare Private Limited.
+            </p>
+            <p class="small">Issued 1 September 2026.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Open to opportunities</h2>
+        <p class="lead">
+          Content Creator • Social Media • Content & Marketing • On-Camera
+          Presenter • Sales • Business Development • Content + Sales
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#work">Start with my work</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div>
+          <strong>Harshit</strong> — Content, Presentation & Sales Portfolio
+        </div>
+        <p>
+          Portfolio claims are intentionally limited to demonstrated work,
+          provided view counts and documented training. No professional
+          employment experience is implied by the simulations.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
